@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { Page404Component } from './components/page404/page404.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  { path: '', component: Page404Component, pathMatch: 'full' }
+]
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  declarations: [], 
+  imports: [ RouterModule.forChild(routes)],
   exports: [RouterModule]
+
 })
 export class ErrorPageRoutingModule { }

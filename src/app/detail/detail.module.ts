@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { DetailComponent } from './detail.component';
+import { SharedModule } from '../shared/shared.module';
 import { DetailRoutingModule } from './detail-routing.module';
-import { DetailComponent } from './Components/detail/detail.component';
-import { CardComponent } from './Components/card/card.component';
+import { CardComponent } from './components/card/card.component';
+
+
 
 
 @NgModule({
   declarations: [DetailComponent, CardComponent],
   imports: [
     CommonModule,
+    SharedModule,
     DetailRoutingModule
   ]
 })

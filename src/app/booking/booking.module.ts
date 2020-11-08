@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormBookingComponent } from './components/form-booking/form-booking.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BookingComponent } from './booking.component';
 import { BookingRoutingModule } from './booking-routing.module';
-import { BookingComponent } from './Components/booking/booking.component';
-import { FormBookingComponent } from './Components/form-booking/form-booking.component';
+
 
 
 @NgModule({
-  declarations: [BookingComponent, FormBookingComponent],
+  declarations: [FormBookingComponent, BookingComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     BookingRoutingModule
   ]
 })

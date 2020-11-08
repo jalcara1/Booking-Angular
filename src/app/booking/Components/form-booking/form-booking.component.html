@@ -1,1 +1,22 @@
-<p>form-booking works!</p>
+<section>
+    <form [formGroup]="formGroupBooking" class="form">
+        <div class="control-form">
+            <label>Fecha Inicio:</label>
+            <input formControlName="booking_date_start" type="date" name="booking_date_start">
+        </div>
+        <span class="error"> {{ getError('booking_date_start') }} </span>
+        <div class="control-form">
+            <label>Fecha Fin:</label>
+            <input formControlName="booking_date_end" type="date" name="booking_date_end">
+        </div>
+        <span class="error"> {{ getError('booking_date_end') }} </span>
+        <div class="control-form">
+            <label>Comentarios:</label>
+            <textarea formControlName="comments" name="comments"></textarea>
+        </div>
+        <span class="error"> {{ getError('comments') }} </span>
+        <button (click)="booking()" [disabled]="formGroupBooking.invalid">Reservar</button>
+        <span class="responseHTML"> {{ errorHandler }} </span>
+    </form>
+    
+</section>

@@ -1,0 +1,14 @@
+<section>
+    <form [formGroup]="formGroupLogin" class="form">
+        <div class="control-form">
+            <label>Usuario:</label>
+            <input formControlName="email" type="text" name="email">
+        </div>
+        <div class="control-form">
+            <label>Contraseña:</label>
+            <input formControlName="password" type="password" name="pasword">
+        </div>
+        <button (click)="login()" [disabled]="formGroupLogin.invalid">Iniciar Sesión</button>
+        <span class="error"> {{ responseLogin }} </span>
+    </form>
+</section>

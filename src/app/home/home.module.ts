@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HomeComponent } from './home.component';
+import { RankingComponent } from './components/ranking/ranking.component';
+import { CardComponent } from './components/card/card.component';
+import { SharedModule } from '../shared/shared.module';
+import { ExpListComponent } from './components/exp-list/exp-list.component';
+import { ExpCardComponent } from './components/exp-card/exp-card.component';
+import { RouterModule } from '@angular/router';
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './Components/home/home.component';
-import { CardComponent } from './Components/card/card.component';
-import { ExpCardComponent } from './Components/exp-card/exp-card.component';
-import { ExpListComponent } from './Components/exp-list/exp-list.component';
-import { RankingComponent } from './Components/ranking/ranking.component';
-
 
 @NgModule({
-  declarations: [HomeComponent, CardComponent, ExpCardComponent, ExpListComponent, RankingComponent],
+  declarations: [
+    HomeComponent, 
+    CardComponent,
+    RankingComponent,      
+    ExpListComponent, 
+    ExpCardComponent],
   imports: [
     CommonModule,
+    SharedModule,
+    RouterModule,
     HomeRoutingModule
   ]
 })
+
 export class HomeModule { }
